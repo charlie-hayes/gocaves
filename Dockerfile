@@ -3,6 +3,8 @@ WORKDIR /app
 
 COPY . .
 
+RUN go run tools/prebuildstep.go
+
 RUN go get
 
 RUN go mod download
